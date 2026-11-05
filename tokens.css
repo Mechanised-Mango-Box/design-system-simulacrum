@@ -1,0 +1,63 @@
+/* Simulacrum tokens, compiled from tokens.json in this folder. */
+:root, [data-theme="ayre"] {
+  --bg: #090b0c;
+  --panel: #0f1213;
+  --raise: #171b1c;
+  --hair: #2a3133;
+  --line: #4a5558;
+  --arrow: #7b8789;
+  --slate: #3a474b;
+  --ink: #dfe4e1;
+  --soft: #bcc5c2;
+  --dim: #98a3a1;
+  --accent: #8addee;
+  --accent-bg: #0f1f25;
+  --accent-line: #2c4c57;
+  --on-accent: #061216;
+  --hot: #ff6a3d;
+  --on-hot: #170803;
+  --steel: #2f4a5c;
+  --moss: #3b4f3a;
+  --amber: #5a4a26;
+  --rust: #5e3528;
+  --plum: #4a3a5a;
+  --selected-vertical: inset 4px 0 0 #dfe4e1;
+  --selected-horizontal: inset 0 -4px 0 #dfe4e1;
+}
+[data-theme="pyre"] {
+  --bg: #0c0b09;
+  --panel: #13110f;
+  --raise: #1c1a17;
+  --hair: #332f2a;
+  --line: #58524a;
+  --arrow: #918573;
+  --slate: #4b443a;
+  --ink: #e5e2de;
+  --soft: #c8c2b9;
+  --dim: #a9a092;
+  --accent: #f2c46d;
+  --accent-bg: #241b0e;
+  --accent-line: #57442a;
+  --on-accent: #171005;
+  --hot: #ff5240;
+  --selected-vertical: inset 4px 0 0 #e5e2de;
+  --selected-horizontal: inset 0 -4px 0 #e5e2de;
+}
+:root {
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 8px;
+  --space-4: 12px;
+  --space-5: 16px;
+  --space-6: 20px;
+  --space-7: 24px;
+  --space-8: 28px;
+  --space-9: 48px;
+  --control-height: 44px;
+  --radius-none: 0;
+  --chamfer: 10px;
+  --bracket: 12px;
+  --font-display: "Saira Semi Condensed", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}

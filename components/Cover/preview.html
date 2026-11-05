@@ -1,0 +1,51 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Simulacrum</title>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--bg); color: var(--ink); overflow: hidden; }
+  .cover { position: relative; height: 288px; overflow: hidden; }
+  .art { position: absolute; top: 0; left: 480px; width: 480px; height: 288px; }
+  .art svg { display: block; width: 480px; height: 288px; }
+  .text { position: absolute; left: 32px; bottom: 28px; width: 420px; }
+  .name { margin: 0; font-family: var(--font-display); font-size: 64px; line-height: .95; font-weight: 300; letter-spacing: .02em; }
+  .tag { margin: 12px 0 0; font-family: var(--font-body); font-size: 14px; color: var(--dim); }
+  .accent { fill: var(--accent); }
+  .hot { fill: var(--hot); }
+  .slate { fill: var(--slate); }
+  .raise { fill: var(--raise); }
+  .ticks { stroke: var(--bg); stroke-width: 2; }
+  .brk { fill: none; stroke: var(--ink); stroke-width: 2; }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art">
+<!--
+  blocks: slate 200x192, accent 136x288 bleeding top and bottom, hot 64x96, raise 200x96; scales are multiples of space-5 and space-9.
+  arrangement: one tall accent slab with a slate field and a small hot signal, square corners only (radius-none).
+  pattern: precise, technical, mono, so a tick ruler cut from the slate block, the system's own separator, at the ruler's 8px pitch.
+  steps and radii: space-3 pitch, bracket arms from the panel corners, radius-none.
+-->
+<svg viewBox="0 0 480 288" aria-hidden="true">
+<rect class="raise" x="72" y="192" width="200" height="96"></rect>
+<rect class="slate" x="72" y="0" width="200" height="192"></rect>
+<rect class="accent" x="344" y="0" width="136" height="288"></rect>
+<rect class="hot" x="272" y="96" width="72" height="96"></rect>
+<g class="ticks">
+<path d="M88 176v16M96 176v16M104 176v16M112 176v16M120 176v16M128 176v16M136 176v16M144 176v16M152 176v16M160 176v16M168 176v16M176 176v16M184 176v16M192 176v16M200 176v16M208 176v16M216 176v16M224 176v16M232 176v16M240 176v16M248 176v16M256 176v16"></path>
+</g>
+<path class="brk" d="M84 28V16H96M260 276V264M260 276H248"></path>
+</svg>
+</div>
+<div class="text">
+<h1 class="name">Simulacrum</h1>
+<p class="tag">Colour only appears when it means something.</p>
+</div>
+</div>
+</body>
+</html>
