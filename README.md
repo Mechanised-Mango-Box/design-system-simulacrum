@@ -1,4 +1,4 @@
-Simulacrum is the design system for Secretary, a personal assistant server. It's a dark, stripped-back tactical HUD where colour only appears when it means something. It takes its feel from mech-game interfaces and uses no assets from any game.
+Simulacrum is a design system for dense, dark interfaces such as dashboards, consoles and internal tools. It's a stripped-back tactical HUD where colour only appears when it means something. It takes its feel from mech-game interfaces and uses no assets from any game.
 
 ## Leanings
 
@@ -17,26 +17,28 @@ Load the three Google Fonts below, then the tokens and `components/bundle.css`. 
 <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 ```
 
+**Adopting it in a project.** Decide what the two signals mean in your project before building screens, and write that down with the project. Choose one leaning for the whole product.
+
 ## Content fundamentals
 
-- Write plainly, in short sentences. Tell the owner what happened and what to do: "Nothing goes out until you approve it."
-- Address the owner as "you". The assistant never says "I".
-- Use sentence case in source text. Labels become uppercase through styling, so write "Approve and send", not "APPROVE AND SEND".
-- Name the system's real concepts exactly: source, sink, cast, router, planner, panel.
-- Write dates as "Thursday 5 November" and times in 24-hour form, "09:30".
+- Write plainly, in short sentences. Tell people what happened and what to do next.
+- Address the reader as "you".
+- Use sentence case in source text. Labels become uppercase through styling, so write "Save changes", not "SAVE CHANGES".
+- Name things the same way everywhere. Use a project's own terms exactly and consistently.
+- Show dates in full, such as "Thursday 5 November", and times in 24-hour form, such as "09:30".
 - Use the middle dot to join short facts: "Due Friday · 15 min".
-- Mark missing rules as a visible placeholder such as `[YOUR RULE]`.
+- Mark missing content with a visible placeholder such as `[YOUR TEXT]`.
 - Use no emoji.
 
 ## Visual foundations
 
 **Colour.** Stay neutral by default. Use `bg` for the screen, `panel` for containers and `raise` for anything lifted or selected. Set text in `ink`, `soft` and `dim`, in that order of importance.
 
-Two signals carry all the meaning. Use `accent` only for model calls and casts. Use `hot` only for what needs the owner: approvals, refused edges, the now line and today's date. Never use either as decoration.
+Two signals carry all the meaning. Use `accent` for what the system is doing or has produced by itself, such as automated output, active processes and links. Use `hot` for what needs the person using it, such as required actions, errors, the current-time line and today's date. Never use either as decoration.
 
 **Selection.** Selection is a raised row with a pale line on its outer edge, never a bright fill. Use `selected-vertical` in vertical lists and `selected-horizontal` in horizontal selects, with the line covering the container's border. White fills are reserved for the single strongest neutral action.
 
-**Item colours.** People may colour calendar items with `steel`, `moss`, `amber`, `rust`, `plum` or `slate`. Keep these dark, with `ink` text. Fitted tasks default to `slate`.
+**Item colours.** People may colour their own items with `steel`, `moss`, `amber`, `rust`, `plum` or `slate`. Keep these dark, with `ink` text. Items default to `slate`.
 
 **Type.** Set headings, navigation and controls in Saira Semi Condensed, uppercase and tracked: `screen-title`, `brand`, `nav-label`, `control-label`. Set anything people read in Source Sans 3: `body`, `item-title`, `meta`. Set times, labels and ports in JetBrains Mono: `time`, `readout`, `label`, `port`.
 
@@ -50,14 +52,14 @@ Two signals carry all the meaning. Use `accent` only for model calls and casts. 
 
 **Focus.** Show a solid 2px `accent` outline on keyboard focus.
 
-**Motion.** Keep motion subtle, and respect the reduced-motion setting. Animated data pulses along graph edges are planned but not yet in the system.
+**Motion.** Keep motion subtle, and respect the reduced-motion setting. Animated pulses along graph edges are planned but not yet in the system.
 
 **Backgrounds.** Screens are a flat `bg`. A faint 48px grid, using a line just lighter than `bg`, is parked as a possible later option.
 
 ## Iconography
 
-The product has no logo, so set its name in plain type using `brand`. The sidebar uses two-digit mono numbers in place of icons. Draw small functional glyphs, such as chevrons, as inline square-capped strokes in `currentColor`. Use no emoji.
+Where a product has no logo, set its name in plain type using `brand`. The sidebar uses two-digit mono numbers in place of icons. Draw small functional glyphs, such as chevrons, as inline square-capped strokes in `currentColor`. Use no emoji.
 
 ## Graphs
 
-Build every graph, routing or boundaries, from `.sim-node`. Sinks are hollow squares on the left and sources are filled squares on the right, each with a mono name. Run edges port to port in `arrow`. Mark nodes that call the model, and casts, with `.sim-node--accent`. Draw a refused edge as a dashed `hot` line.
+Build every graph from `.sim-node`. Sinks are hollow squares on the left and sources are filled squares on the right, each with a mono name. Run edges port to port in `arrow`. Mark nodes where the system acts by itself with `.sim-node--accent`. Draw a blocked edge as a dashed `hot` line.

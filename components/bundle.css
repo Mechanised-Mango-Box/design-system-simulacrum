@@ -48,8 +48,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .sim-row__foot { display: flex; flex-wrap: wrap; gap: var(--space-2) 10px; font-size: 13px; color: var(--dim); }
 .sim-row__flag { font-weight: 600; color: var(--hot); }
 
-.sim-model-row { padding: 10px var(--space-4); display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; align-items: baseline; background: var(--accent-bg); border: 1px solid var(--accent-line); font-weight: 500; }
-.sim-model-row span { font-family: var(--font-mono); font-size: 12px; font-weight: 400; color: var(--accent); }
+.sim-accent-row { padding: 10px var(--space-4); display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; align-items: baseline; background: var(--accent-bg); border: 1px solid var(--accent-line); font-weight: 500; }
+.sim-accent-row span { font-family: var(--font-mono); font-size: 12px; font-weight: 400; color: var(--accent); }
 
 .sim-banner { padding: var(--space-4) var(--space-5); display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-5); align-items: center; justify-content: space-between; background: var(--bg); border: 1px solid var(--line); }
 .sim-banner--hot { border-color: var(--hot); }
